@@ -30,6 +30,7 @@ def index():
 @app.route('/release')
 def release():
   return github_request(f'https://api.github.com/repos/{os.environ.get("OWNER")}/{os.environ.get("REPO")}/releases')
+  
 
 
 @app.route('/most_3_recent/release')
